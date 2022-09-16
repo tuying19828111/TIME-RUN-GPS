@@ -1,0 +1,297 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: WCU Radio ECU OBD AC GPS ICU KPAD MCU HMI BCM
+VAL_TABLE_ Back_4_currency 3 "0x03:无效值" 2 "0x02:错误" 1 "0x01:开启" 0 "0x00:关闭" ;
+VAL_TABLE_ SW_2 1 "0x1开启" 0 "0x0无操作'" ;
+VAL_TABLE_ SW_1 2 "0x3:无效值" 1 "0x1:请求激活" 0 "0x0:请求未激活" ;
+VAL_TABLE_ OPS_state 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_TABLE_ Back_2_currency 1 "0x01:ON" 0 "0x00:OFF" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ P_P_BUCKET_OUT : 0|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ P_P_ARM_OUT : 0|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ P_P_OPTION : 0|8@1+ (1,0) [0|255] "bar " Vector__XXX
+ SG_ P_P_BUCKET_IN : 0|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ P_P_ARM_IN : 0|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ P_P_BOOM_DOMN : 0|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ P_P_BOOM_UP : 0|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ P_P2 : 0|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ P_P1 : 0|8@1+ (1,0) [0|255] "bar" Vector__XXX
+ SG_ Hour : 0|64@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566870831 BCM_09: 8 BCM
+ SG_ FanSpeed_8 : 48|16@1+ (1,0) [0|65535] "rpm" Vector__XXX
+ SG_ FanSpeed_7 : 32|16@1+ (1,0) [0|65535] "rpm" Vector__XXX
+ SG_ FanSpeed_6 : 16|16@1+ (1,0) [0|65535] "rpm" Vector__XXX
+ SG_ FanSpeed_5 : 0|16@1+ (1,0) [0|65535] "rpm" Vector__XXX
+
+BO_ 2566870575 BCM_08: 8 BCM
+ SG_ FanSpeed_4 : 48|16@1+ (1,0) [0|65535] "rpm" Vector__XXX
+ SG_ FanSpeed_3 : 32|16@1+ (1,0) [0|65535] "rpm" Vector__XXX
+ SG_ FanSpeed_2 : 16|16@1+ (1,0) [0|65535] "rpm" Vector__XXX
+ SG_ FanSpeed_1 : 0|16@1+ (1,0) [0|65535] "rpm" Vector__XXX
+
+BO_ 2566870319 BCM_07: 8 BCM
+ SG_ Back_Alarm_Lamp_sw : 10|2@1+ (1,0) [0|1] ""  HMI
+ SG_ Back_ACC : 8|2@1+ (1,0) [0|1] ""  HMI
+ SG_ Back_Urea_Heating : 56|4@1+ (1,0) [0|4] ""  HMI
+ SG_ Back_Power_OFF_SET : 48|8@1+ (1,0) [10|255] "m"  HMI
+ SG_ Wiper_Lamp_3 : 44|2@1+ (1,0) [0|3] ""  KPAD
+ SG_ Wiper_Lamp_2 : 42|2@1+ (1,0) [0|3] ""  KPAD
+ SG_ Wiper_Lamp_1 : 40|2@1+ (1,0) [0|3] ""  KPAD
+ SG_ Back_Light_BOOM : 34|2@1+ (1,0) [0|1] ""  KPAD
+ SG_ Back_Light_Cab : 32|2@1+ (1,0) [0|1] ""  KPAD
+ SG_ Back_Radar_Host : 14|2@1+ (1,0) [0|1] ""  HMI
+ SG_ Back_Look_Around : 12|2@1+ (1,0) [0|1] ""  HMI
+ SG_ Back_Water_Jet_Pump : 6|2@1+ (1,0) [0|1] ""  HMI
+ SG_ Back_lubrication : 4|2@1+ (1,0) [0|1] ""  HMI
+ SG_ Back_Seat_Pump : 2|2@1+ (1,0) [0|1] ""  HMI
+ SG_ Back_Refueling_Pump : 0|2@1+ (1,0) [0|1] ""  HMI
+
+BO_ 2566870063 BCM_06: 8 BCM
+ SG_ Back_Fan_Progress : 48|8@1+ (1,0) [0|100] "%"  HMI
+ SG_ Back_Fan_time : 56|8@1+ (1,0) [0|60] "m"  HMI
+ SG_ PWM_Fan_6 : 40|8@1+ (1,0) [0|100] "%"  HMI
+ SG_ PWM_Fan_5 : 32|8@1+ (1,0) [0|100] "%"  HMI
+ SG_ PWM_Fan_4 : 24|8@1+ (1,0) [0|100] "%"  HMI
+ SG_ PWM_Fan_3 : 16|8@1+ (1,0) [0|100] "%"  HMI
+ SG_ PWM_Fan_3 : 8|8@1+ (1,0) [0|100] "%"  HMI
+ SG_ PWM_Fan_1 : 0|8@1+ (1,0) [0|100] "%"  HMI
+
+BO_ 2633994336 MCU_06: 8 MCU
+ SG_ SIG_AC : 0|2@1+ (1,0) [0|3] ""  BCM
+
+BO_ 2566871688 MCU_05: 8 MCU
+ SG_ R_Light_SW : 6|2@1+ (1,0) [0|1] ""  BCM
+ SG_ R_Light : 4|2@1+ (1,0) [0|1] ""  BCM
+ SG_ R_Horn : 8|2@1+ (1,0) [0|1] ""  BCM
+ SG_ R_Power : 2|2@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566881521 KPAD_01: 8 KPAD
+ SG_ SW_Light : 0|2@1+ (1,0) [0|1] ""  BCM
+ SG_ SW_Water_Spray : 6|2@1+ (1,0) [0|1] ""  BCM
+ SG_ SW_Wiper : 4|2@1+ (1,0) [0|1] ""  BCM
+
+BO_ 2566891816 HMI_03: 8 HMI
+ SG_ SIG_Fan_Reverse : 54|2@1+ (1,0) [0|1] ""  BCM
+ SG_ SET_Power_OFF : 56|8@1+ (1,0) [10|255] "m"  BCM
+ SG_ SET_Light_Time : 40|8@1+ (1,0) [0|5] ""  BCM
+ SG_ SET_Light_Delay : 48|2@1+ (1,0) [0|1] "m"  BCM
+ SG_ SET_Atmosphere_Lamp : 50|2@1+ (1,0) [0|1] ""  BCM
+ SG_ SET_Alarm_Lamp : 52|2@1+ (1,0) [0|1] ""  BCM
+
+BO_ 2365564712 HMI_02: 8 HMI
+ SG_ SW_ACC : 16|2@1+ (1,0) [0|1] ""  BCM
+ SG_ SW_Radar_Host : 14|2@1+ (1,0) [0|1] ""  BCM
+ SG_ SW_Look_Around : 12|2@1+ (1,0) [0|1] ""  BCM
+ SG_ SW_Alarm_Lamp : 10|2@1+ (1,0) [0|1] ""  BCM
+ SG_ SW_Water_Jet_Pump : 6|2@1+ (1,0) [0|1] ""  BCM
+ SG_ SW_Lubrication : 4|2@1+ (1,0) [0|1] ""  BCM
+ SG_ SW_Seat_Pump : 2|2@1+ (1,0) [0|1] ""  BCM
+ SG_ SW_Refueling_Pump : 0|2@1+ (1,0) [0|1] ""  BCM
+
+BO_ 2365563688 HMI_01: 8 HMI
+ SG_ SET_Fan_Reverse : 0|8@1+ (1,0) [0|60] "s"  BCM
+
+BO_ 2365535790 MCU_2: 8 MCU
+ SG_ SW_Urea_Suction : 4|2@1+ (1,0) [0|3] ""  BCM
+ SG_ SW_Urea_Pump : 6|2@1+ (1,0) [0|3] ""  BCM
+ SG_ SW_Urea_Return : 2|2@1+ (1,0) [0|3] ""  BCM
+ SG_ SW_Urea_Pressure : 0|2@1+ (1,0) [0|3] ""  BCM
+
+BO_ 2365534254 MCU_1: 8 MCU
+ SG_ Engine_Type : 32|8@1+ (1,0) [0|7] ""  BCM
+
+BO_ 2566869295 BCM_03: 8 BCM
+ SG_ BCM_Fault_Code : 0|16@1+ (1,0) [0|65535] ""  HMI
+
+BO_ 2566869807 BCM_05: 8 BCM
+ SG_ OPS_Power : 24|4@1+ (1,0) [0|15] ""  HMI
+ SG_ V_ACC : 48|8@1+ (1,0) [0|32] "V"  HMI
+ SG_ V_Radar_Host : 40|8@1+ (1,0) [0|32] "V"  HMI
+ SG_ V_Look_Around : 32|8@1+ (1,0) [0|32] "V"  HMI
+ SG_ OPS_Lamp_BIUE : 20|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_Lamp_RED : 16|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_Lamp_Alarm : 12|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_HMI : 8|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_Lamp_Indoor : 4|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_Lamp_Cab : 0|4@1+ (1,0) [0|15] ""  HMI
+
+BO_ 2566869551 BCM_04: 8 BCM
+ SG_ OPS_Exhaust : 52|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_Smoke : 48|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_Refueling_Pump : 44|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_Horn : 40|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_Wiper : 36|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_Water_Pump : 32|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_Oil_Pump : 28|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_Lubrication : 24|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_Chair : 20|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_Urea : 16|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_AC : 12|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_MCU : 0|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_Lamp_BOOM : 60|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_ACC : 56|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_ICU : 4|4@1+ (1,0) [0|15] ""  HMI
+ SG_ OPS_ECU : 8|4@1+ (1,0) [0|15] ""  HMI
+
+BO_ 2566857518 H_O_P: 8 MCU
+ SG_ P_P_Right_Travel : 40|8@1+ (1,0) [0|255] "bar"  BCM
+ SG_ P_P_Left_Travel : 32|8@1+ (1,0) [0|255] "bar "  BCM
+
+BO_ 2566869039 BCM_02: 8 BCM
+ SG_ TIPS_Not_Cold : 46|2@1+ (1,0) [0|1] ""  HMI
+ SG_ TIPS_Start_Engine : 44|2@1+ (1,0) [0|1] ""  HMI
+ SG_ Software_Version_No_2 : 56|8@1+ (1,0) [0|255] ""  HMI
+ SG_ Software_Version_No_1 : 48|8@1+ (1,0) [0|255] ""  HMI
+ SG_ TIPS_Lift_Handle : 42|2@1+ (1,0) [0|1] ""  HMI
+ SG_ Back_Fan_Status : 40|2@1+ (1,0) [0|3] ""  HMI
+ SG_ Back_Horn_Signal : 36|2@1+ (1,0) [0|1] ""  ICU,HMI
+ SG_ Back_Alarm_Lamp : 34|2@1+ (1,0) [0|1] ""  HMI
+ SG_ Back_Power_On : 16|2@1+ (1,0) [0|3] ""  HMI
+ SG_ Back_Light_Time : 8|8@1+ (1,0) [0|5] "S"  HMI
+ SG_ Back_Flameout_Delay : 2|2@1+ (1,0) [0|3] ""  HMI
+ SG_ Back_Light_Delay : 6|2@1+ (1,0) [0|3] ""  HMI
+ SG_ Back_Safety_Belt : 4|2@1+ (1,0) [0|1] ""  HMI
+ SG_ Back_Atmosphere_Lamp : 32|2@1+ (1,0) [0|1] ""  BCM,HMI
+ SG_ BCM_Heartbeat : 0|2@1+ (1,0) [0|3] ""  HMI
+
+BO_ 2566860334 MCU_04: 8 MCU
+ SG_ Controller_Version_Number : 48|16@1+ (1,0) [0|65535] ""  BCM
+
+BO_ 2566861870 MCU_03: 8 MCU
+ SG_ Eng_Speed1 : 32|16@1+ (1,0) [0|8031.875] "rpm"  BCM
+ SG_ TEMP_Water : 56|8@1+ (1,0) [-40|255] "℃"  BCM
+
+BO_ 2566857262 MCU_02: 8 MCU
+ SG_ P_P_SWING : 48|8@1+ (1,0) [0|255] "bar "  BCM
+
+BO_ 2566856750 MCU_01: 8 MCU
+ SG_ TEMP_H_Oil : 16|8@1+ (1,0) [-40|130] "℃"  BCM
+ SG_ Back_Lift_Handle : 34|2@1+ (1,0) [0|7] ""  HMI,BCM
+
+BO_ 2566769967 BCM_01: 8 BCM
+ SG_ SW_Water_Spray_1 : 37|3@1+ (1,0) [0|7] ""  WCU
+ SG_ SW_Wiper_1 : 4|4@1+ (1,0) [0|15] ""  WCU
+
+BO_ 2365525120 ICU_1: 8 ICU
+ SG_ R_Horn : 8|2@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_TX_BU_ 2566871688 : ICU,MCU;
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 2566870319 Back_Alarm_Lamp_sw 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566870319 Back_ACC 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566870319 Back_Urea_Heating 4 "0x4：短路" 3 "0x3：断路" 2 "0x2：正常输出" 1 "0x1：正常不输出" ;
+VAL_ 2566870319 Wiper_Lamp_3 3 "0x03:无效值" 2 "0x02:错误" 1 "0x01:开启" 0 "0x00:关闭" ;
+VAL_ 2566870319 Wiper_Lamp_2 3 "0x03:无效值" 2 "0x02:错误" 1 "0x01:开启" 0 "0x00:关闭" ;
+VAL_ 2566870319 Wiper_Lamp_1 3 "0x03:无效值" 2 "0x02:错误" 1 "0x01:开启" 0 "0x00:关闭" ;
+VAL_ 2566870319 Back_Light_BOOM 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566870319 Back_Light_Cab 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566870319 Back_Radar_Host 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566870319 Back_Look_Around 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566870319 Back_Water_Jet_Pump 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566870319 Back_lubrication 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566870319 Back_Seat_Pump 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566870319 Back_Refueling_Pump 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2633994336 SIG_AC 3 "0x03:无效值" 2 "0x02:错误" 1 "0x01:开启" 0 "0x00:关闭" ;
+VAL_ 2566871688 R_Light_SW 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566871688 R_Light 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566871688 R_Horn 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566871688 R_Power 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566881521 SW_Light 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566881521 SW_Water_Spray 1 "0x1开启" 0 "0x0无操作'" ;
+VAL_ 2566881521 SW_Wiper 1 "0x1开启" 0 "0x0无操作'" ;
+VAL_ 2566891816 SIG_Fan_Reverse 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566891816 SET_Light_Delay 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566891816 SET_Atmosphere_Lamp 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566891816 SET_Alarm_Lamp 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2365564712 SW_ACC 1 "0x1开启" 0 "0x0无操作'" ;
+VAL_ 2365564712 SW_Radar_Host 1 "0x1开启" 0 "0x0无操作'" ;
+VAL_ 2365564712 SW_Look_Around 1 "0x1开启" 0 "0x0无操作'" ;
+VAL_ 2365564712 SW_Alarm_Lamp 1 "0x1开启" 0 "0x0无操作'" ;
+VAL_ 2365564712 SW_Water_Jet_Pump 1 "0x1开启" 0 "0x0无操作'" ;
+VAL_ 2365564712 SW_Lubrication 1 "0x1开启" 0 "0x0无操作'" ;
+VAL_ 2365564712 SW_Seat_Pump 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2365564712 SW_Refueling_Pump 1 "0x1开启" 0 "0x0无操作'" ;
+VAL_ 2365535790 SW_Urea_Suction 2 "0x3:无效值" 1 "0x1:请求激活" 0 "0x0:请求未激活" ;
+VAL_ 2365535790 SW_Urea_Pump 2 "0x3:无效值" 1 "0x1:请求激活" 0 "0x0:请求未激活" ;
+VAL_ 2365535790 SW_Urea_Return 2 "0x3:无效值" 1 "0x1:请求激活" 0 "0x0:请求未激活" ;
+VAL_ 2365535790 SW_Urea_Pressure 2 "0x3:无效值" 1 "0x1:请求激活" 0 "0x0:请求未激活" ;
+VAL_ 2365534254 Engine_Type 6 "0x6:五十铃（有尿素）" 5 "0x5:五十铃（有尿素）" 4 "0x4:潍柴（有尿素）" 3 "0x3:潍柴（有尿素）" 2 "0x2:康明斯（无尿素）" 1 "0x1:康明斯（有尿素）" ;
+VAL_ 2566869807 OPS_Power 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869807 OPS_Lamp_BIUE 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869807 OPS_Lamp_RED 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869807 OPS_Lamp_Alarm 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869807 OPS_HMI 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869807 OPS_Lamp_Indoor 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869807 OPS_Lamp_Cab 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869551 OPS_Exhaust 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869551 OPS_Smoke 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869551 OPS_Refueling_Pump 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869551 OPS_Horn 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869551 OPS_Wiper 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869551 OPS_Water_Pump 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869551 OPS_Oil_Pump 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869551 OPS_Lubrication 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869551 OPS_Chair 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869551 OPS_Urea 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869551 OPS_AC 0 "0x0:雨刮器关闭" 15 "0xF:无法使用" 5 "0x5:雨刮器间歇低速" 4 "0x4:雨刮器间歇高速" 1 "0x1:雨刮器连续" ;
+VAL_ 2566869551 OPS_MCU 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869551 OPS_Lamp_BOOM 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869551 OPS_ACC 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869551 OPS_ICU 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869551 OPS_ECU 15 "0x0F：无效值" 5 "0x05：过电流" 4 "0x04：短路" 3 "0x03：断路" 2 "0x02：正常输出" 1 "0x01：正常不输出" ;
+VAL_ 2566869039 TIPS_Not_Cold 1 "0x1:报警提示" 0 "0x0:正常" ;
+VAL_ 2566869039 TIPS_Start_Engine 1 "0x1:报警提示" 0 "0x0:正常" ;
+VAL_ 2566869039 TIPS_Lift_Handle 1 "0x1:报警提示" 0 "0x0:正常" ;
+VAL_ 2566869039 Back_Fan_Status 3 "0x03:本次清洗未能顺利完成！" 2 "0x02:本次清洗已顺利完成！" 1 "0x01:风扇清洗中，请勿进行操作！" 0 "0x00:OFF" ;
+VAL_ 2566869039 Back_Horn_Signal 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566869039 Back_Alarm_Lamp 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566869039 Back_Power_On 3 "0x03:无效值" 2 "0x02:错误" 1 "0x01:开启" 0 "0x00:关闭" ;
+VAL_ 2566869039 Back_Flameout_Delay 3 "0x03:无效值" 2 "0x02:错误" 1 "0x01:开启" 0 "0x00:关闭" ;
+VAL_ 2566869039 Back_Light_Delay 3 "0x03:无效值" 2 "0x02:错误" 1 "0x01:开启" 0 "0x00:关闭" ;
+VAL_ 2566869039 Back_Safety_Belt 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566869039 Back_Atmosphere_Lamp 1 "0x01:ON" 0 "0x00:OFF" ;
+VAL_ 2566869039 BCM_Heartbeat 3 "0x3:无效值" 2 "0x2:错误" 1 "0x1:在线信号" ;
+VAL_ 2566856750 Back_Lift_Handle 3 "0x03:无效值" 2 "0x02:错误" 1 "0x01:开启" 0 "0x00:关闭" ;
+VAL_ 2566769967 SW_Wiper_1 0 "0x0:雨刮器关闭" 15 "0xF:无法使用" 5 "0x5:雨刮器间歇低速" 4 "0x4:雨刮器间歇高速" 1 "0x1:雨刮器连续" ;
+VAL_ 2365525120 R_Horn 1 "0x01:ON" 0 "0x00:OFF" ;
+

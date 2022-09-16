@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"can_double_7815\startup_ac78xx.o"
+"can_double_7815\main.o"
+"can_double_7815\gpio.o"
+"can_double_7815\can.o"
+"can_double_7815\i2c.o"
+"can_double_7815\timer.o"
+"can_double_7815\uart.o"
+"can_double_7815\ac78xx_irq_cb.o"
+"can_double_7815\ac78xx_msp.o"
+"can_double_7815\system_ac78xx.o"
+"can_double_7815\ac78xx_gpio.o"
+"can_double_7815\ac78xx_can.o"
+"can_double_7815\ac78xx_i2c.o"
+"can_double_7815\ac78xx_dma.o"
+"can_double_7815\ac78xx_timer.o"
+"can_double_7815\ac78xx_uart.o"
+"can_double_7815\ac78xx_ckgen.o"
+"can_double_7815\ac78xx_spm.o"
+--library_type=microlib --strict --scatter "CAN_DOUBLE_7815\CAN_DOUBLE_7815.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\CAN_DOUBLE_7815.map" -o CAN_DOUBLE_7815\CAN_DOUBLE_7815.axf

@@ -1,0 +1,342 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: GPS HMI MCU
+VAL_TABLE_ Signals_MODE 4 "B模式" 2 "L模式" 1 "H模式" 0 "S模式" ;
+VAL_TABLE_ Signals_Lock 2 "二级锁车" 1 "一级锁车" 0 "未锁机" ;
+VAL_TABLE_ Signals_Bin 1 "ON" 0 "OFF" ;
+
+
+BO_ 2147487632 GPS_09: 8 Vector__XXX
+ SG_ GPS_Version_2 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ GPS_Version_1 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ GPS_day : 40|8@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ GPS_month : 32|8@1+ (1,0) [0|12] "" Vector__XXX
+ SG_ GPS_YAER : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ GPS_Type : 16|8@1+ (1,0) [0|12] "" Vector__XXX
+ SG_ GPS_Supplier_NO : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2147487568 GPS_08: 8 GPS
+ SG_ GPS_NO : 0|24@1+ (1,0) [0|16777215] "" Vector__XXX
+
+BO_ 2147487552 GPS_07: 8 Vector__XXX
+ SG_ GPS_Replace : 0|24@1+ (1,0) [0|327685] "" Vector__XXX
+
+BO_ 2147484932 GPS_04: 8 Vector__XXX
+
+BO_ 2147487536 GPS_06: 8 Vector__XXX
+ SG_ GPS_Error : 16|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GPS_Antenna : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GPS_Heart : 0|8@1+ (1,0) [0|170] "" Vector__XXX
+
+BO_ 2147487520 GPS_05: 8 Vector__XXX
+ SG_ GPS_satellite_2 : 16|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ GPS_satellite_1 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ GPS_RSSI : 0|8@1+ (1,0) [0|4] "" Vector__XXX
+
+BO_ 2147484931 GPS_03: 8 Vector__XXX
+
+BO_ 2147484930 GPS_02: 8 Vector__XXX
+
+BO_ 2147484929 GPS_01: 8 GPS
+
+BO_ 2147484421 MCU_15: 8 MCU
+ SG_ S_TRVEL : 0|1@1+ (1,0) [0|1000] ""  HMI
+ SG_ S_BOOST : 1|1@1+ (1,0) [0|1000] ""  HMI
+ SG_ B_POWER_C : 32|16@1+ (1,0) [0|120] "%"  HMI
+ SG_ B_OPTION_Flow : 16|16@1+ (1,0) [0|10] "Bank"  HMI
+
+BO_ 2147484420 MCU_14: 8 MCU
+ SG_ I_BOOM_P_2 : 16|16@1+ (1,0) [0|1000] "mA"  HMI
+ SG_ I_BOOM_P_1 : 0|16@1+ (1,0) [0|1000] "mA"  HMI
+
+BO_ 2147484419 MCU_13: 8 MCU
+ SG_ I_BOOM_SWING : 48|16@1+ (1,0) [0|1000] "mA"  HMI
+ SG_ I_BUCKET_Flow : 32|16@1+ (1,0) [0|1000] "mA"  HMI
+ SG_ I_P2 : 16|16@1+ (1,0) [0|1000] "mA"  HMI
+ SG_ I_P1 : 0|16@1+ (1,0) [0|1000] "mA"  HMI
+
+BO_ 2147484418 MCU_12: 8 MCU
+ SG_ P_P_BUCKET_IN : 32|16@1+ (1,0) [0|50] "bar" Vector__XXX
+ SG_ P_P_BUCKET_OUT : 48|16@1+ (1,0) [0|50] "bar" Vector__XXX
+ SG_ P_P_BOOM_DOWN : 16|16@1+ (1,0) [0|50] "bar"  HMI
+ SG_ P_P_BOOM_UP : 0|16@1+ (1,0) [0|50] "bar"  HMI
+
+BO_ 2147484417 MCU_11: 8 MCU
+ SG_ P_P_R_T : 48|16@1+ (1,0) [0|50] "bar"  HMI
+ SG_ P_P_L_T : 32|16@1+ (1,0) [0|50] "bar"  HMI
+ SG_ P_P_SWING : 16|16@1+ (1,0) [0|50] "bar"  HMI
+ SG_ P_P_ARM_IN : 0|16@1+ (1,0) [0|50] "bar"  HMI
+
+BO_ 2147484416 MCU_10: 8 MCU
+ SG_ P_P_ARM_OUT : 48|16@1+ (1,0) [0|50] "bar"  HMI
+ SG_ P_P2 : 32|16@1+ (1,0) [0|400] "bar"  HMI
+ SG_ P_P1 : 16|16@1+ (1,0) [0|400] "bar"  HMI
+ SG_ M_H_Oil_T : 0|16@1+ (1,0) [-40|130] "℃"  HMI
+
+BO_ 2147484200 MCU_09: 8 MCU
+ SG_ ECU_CFC_DMI : 48|16@1+ (1,0) [0|65535] ""  HMI
+ SG_ ECU_CFC : 32|16@1+ (1,0) [0|65535] ""  HMI
+ SG_ ECU_IFC_DMI : 16|16@1+ (1,0) [0|65535] ""  HMI
+ SG_ ECU_IFC : 0|16@1+ (1,0) [0|65535] ""  HMI
+
+BO_ 2147484199 MCU_08: 8 MCU
+ SG_ E_CFU : 32|32@1+ (0.5,0) [0|2105540607.5] "L"  HMI
+ SG_ E_FU : 0|32@1+ (0.5,0) [0|2105540607.5] "L"  HMI
+
+BO_ 2147484198 MCU_07: 8 MCU
+ SG_ E_IES : 48|16@1+ (0.125,0) [0|8021.875] "rpm"  HMI
+ SG_ E_DF : 32|16@1+ (0.05,0) [0|3212.75] "L/h"  HMI
+ SG_ B_AI : 24|8@1+ (1,0) [0|1] ""  HMI
+ SG_ B_TS : 16|8@1+ (1,0) [0|1] ""  HMI
+ SG_ B_WM : 8|8@1+ (1,0) [0|4] ""  HMI
+ SG_ S_MC : 5|1@1+ (1,0) [0|1] ""  HMI
+ SG_ S_DIAG : 4|1@1+ (1,0) [0|1] ""  HMI
+ SG_ S_IGN : 2|1@1+ (1,0) [0|1] ""  HMI
+ SG_ S_CM : 3|1@1+ (1,0) [0|1] ""  HMI
+ SG_ S_SMC : 0|1@1+ (1,0) [0|0] ""  HMI
+
+BO_ 2147484197 MCU_06: 8 MCU
+ SG_ S_ES : 56|1@1+ (1,0) [0|1] ""  HMI
+ SG_ V_MR : 40|1@1- (0.05,0) [0|3276.75] "V"  HMI
+ SG_ S_FD : 33|1@1+ (1,0) [0|1] ""  HMI
+ SG_ S_WU : 32|1@1+ (1,0) [0|1] ""  HMI
+ SG_ MCU_FC : 24|8@1+ (1,0) [0|99] ""  HMI
+ SG_ S_GL : 16|8@1+ (1,0) [0|0] ""  HMI
+
+BO_ 2147483921 HMI_01: 8 HMI
+ SG_ H_WH : 0|16@1+ (1,0) [0|65535] "hour"  GPS
+
+BO_ 2147484164 MCU_05: 8 MCU
+ SG_ E_FIV : 48|16@1+ (0.4,0) [0|100] "%"  HMI
+ SG_ E_FT : 32|16@1+ (1,0) [0|500] "mm3st"  HMI
+ SG_ P_FAD : 16|16@1+ (1,0) [0|65535] "MPa"  HMI
+ SG_ P_FR : 0|16@1+ (1,0) [0|65535] "MPa"  HMI
+
+BO_ 2147484163 MCU_04: 8 MCU
+ SG_ M_FL : 48|16@1+ (1,0) [0|100] "%"  HMI
+ SG_ T_Air : 32|16@1+ (1,0) [-40|210] "℃"  HMI
+ SG_ T_Air_B : 16|16@1+ (1,0) [-40|210] "℃"  HMI
+ SG_ P_Air_B : 0|16@1+ (2,0) [0|500] "kPa"  HMI
+
+BO_ 2147484162 MCU_03: 8 MCU
+ SG_ P_Air : 48|16@1+ (0.5,0) [0|125] "kPa"  HMI
+ SG_ P_Oil : 32|16@1+ (4,0) [0|1000] "kPa"  HMI
+ SG_ P_Fuel_In : 16|16@1+ (4,0) [-100|300] "kPa"  HMI
+ SG_ T_Fuel : 0|16@1+ (1,0) [-40|210] "℃"  HMI
+
+BO_ 2147484161 MCU_02: 8 MCU
+ SG_ V_Knob : 32|16@1+ (0.01,0) [0|5] "V"  HMI
+ SG_ W_Gear : 16|16@1+ (1,0) [0|10] ""  HMI
+ SG_ N_AT : 0|16@1+ (1,0) [-125|125] "%"  HMI
+
+BO_ 2147484160 MCU_01: 8 MCU
+ SG_ R_TSP : 48|16@1+ (1,0) [0|2200] "rpm"  HMI
+ SG_ R_ASP : 32|16@1+ (1,0) [0|2200] "rpm"  HMI
+ SG_ T_CW : 16|16@1+ (1,0) [0|130] "℃"  HMI
+ SG_ V_Supply : 0|16@1+ (0.1,0) [0|32] "V"  HMI
+
+
+
+CM_ SG_ 2147484421 S_TRVEL "行走高低速电磁阀:0～1,含义:1：ON；0：OFF
+";
+CM_ SG_ 2147484421 S_BOOST "增力电磁阀:0～1,含义:1：ON；0：OFF
+";
+CM_ SG_ 2147484421 B_POWER_C "功率调整当前值:40-120,分辨率:	1%/bit,缺省值:0";
+CM_ SG_ 2147484421 B_OPTION_Flow "破碎锤流量控制器当前值：0-10【Rank】，分辨率：1【Rank】缺省值：0";
+CM_ SG_ 2147484420 I_BOOM_P_2 "动臂优先2电磁阀:0～1000,分辨率:1mA/bit,缺省值:0";
+CM_ SG_ 2147484420 I_BOOM_P_1 "动臂优先1电磁阀:0～1000,分辨率:1mA/bit,缺省值:0";
+CM_ SG_ 2147484419 I_BOOM_SWING "动臂相对回转电磁阀:0～1000,分辨率:1mA/bit,缺省值:0";
+CM_ SG_ 2147484419 I_BUCKET_Flow "铲斗合流电磁阀:0～1000,分辨率:1mA/bit,缺省值:0";
+CM_ SG_ 2147484419 I_P2 "P2泵比例电磁阀:0～1000,分辨率:1mA/bit,缺省值:0";
+CM_ SG_ 2147484419 I_P1 "PI泵比例电磁阀:0～1000,分辨率:1mA/bit,缺省值:0";
+CM_ SG_ 2147484418 P_P_BUCKET_IN "铲斗挖掘先导压力:0～50,分辨率:1bar/bit,缺省值:0";
+CM_ SG_ 2147484418 P_P_BUCKET_OUT "铲斗卸料先导压力:0～50,分辨率:1bar/bit,缺省值:0";
+CM_ SG_ 2147484418 P_P_BOOM_DOWN "动臂下降先导压力:0～50,分辨率:1bar/bit,缺省值:0";
+CM_ SG_ 2147484418 P_P_BOOM_UP "动臂提升先导压力:0～50,分辨率:1bar/bit,缺省值:0";
+CM_ SG_ 2147484417 P_P_R_T "右行走导压力:0～50,分辨率:1bar/bit,缺省值:0";
+CM_ SG_ 2147484417 P_P_L_T "左行走先导压力:0～50,分辨率:1bar/bit,缺省值:0";
+CM_ SG_ 2147484417 P_P_SWING "回转先导压力:0～50,分辨率:1bar/bit,缺省值:0";
+CM_ SG_ 2147484417 P_P_ARM_IN "斗杆挖掘先导压力:0～50,分辨率:1bar/bit,缺省值:0";
+CM_ SG_ 2147484416 P_P_ARM_OUT "斗杆卸料先导压力:0～50,分辨率:1bar/bit,缺省值:0";
+CM_ SG_ 2147484416 P_P2 "后泵主压力:0～400,分辨率:1bar/bit,缺省值:0";
+CM_ SG_ 2147484416 P_P1 "前泵主压力:0～400,分辨率:1bar/bit,缺省值:0";
+CM_ SG_ 2147484416 M_H_Oil_T "液压油温:-40～130,分辨率:1℃/bit,缺省值:-40";
+CM_ SG_ 2147484200 ECU_CFC_DMI "康明斯发动故障DMI";
+CM_ SG_ 2147484200 ECU_CFC "康明斯发动故障SPN";
+CM_ SG_ 2147484200 ECU_IFC_DMI "五十铃发动故障DMI";
+CM_ SG_ 2147484200 ECU_IFC "五十铃发动故障SPN";
+CM_ SG_ 2147484199 E_CFU "本机累计燃油使用量:0-2105540607.5(L),分辨率:0.5 L;缺省值:0";
+CM_ SG_ 2147484199 E_FU "本次启动燃油使用量:0-2105540607.5(L),分辨率:0.5 L;缺省值:0";
+CM_ SG_ 2147484198 E_IES "指示发动机转速:0-8031.875,分辨率:0.125rpm;缺省值:0";
+CM_ SG_ 2147484198 E_DF "动态燃油消耗:0-3212.75（L/h）,分辨率:0.05 L/h;缺省值:0";
+CM_ SG_ 2147484198 B_AI "自动怠速模式反馈:0-1,含义:0:开启自动怠速,1:关闭自动怠速
+";
+CM_ SG_ 2147484198 B_TS "行走速度反馈:0-1,含义:0：低速1：高速
+";
+CM_ SG_ 2147484198 B_WM "工作模式反馈:0-4,含义:0:S,1:H,2:L,4:B
+";
+CM_ SG_ 2147484198 S_MC "起动机开关：0-1,含义： 0:OFF；1:ON	-
+";
+CM_ SG_ 2147484198 S_DIAG "诊断仪使能开关：0-1,含义： 0:OFF；1:ON	-
+";
+CM_ SG_ 2147484198 S_IGN "IGN钥匙开关:0-1;含义:0:OFF；1:ON	-
+";
+CM_ SG_ 2147484198 S_CM "清除故障码开关：0-1,含义： 0:OFF；1:ON	-
+";
+CM_ SG_ 2147484198 S_SMC "启动电机切断继电器信:0-1,含义：1：ON；0：OFF";
+CM_ SG_ 2147484197 S_ES "发动机停机开关:0-1,含义：1：ON；0：OFF
+";
+CM_ SG_ 2147484197 V_MR "主继电器电压:0～3212.75V,分辨率:0.05v/bit,缺省值:0";
+CM_ SG_ 2147484197 S_FD "熄火延时输出信号:0-1,含义：1：ON；0：OFF
+";
+CM_ SG_ 2147484197 S_WU "预热信号:0-1,含义：1：ON；0：OFF
+";
+CM_ SG_ 2147484197 MCU_FC "MCU制器故障代码:0-99，故障代码：EM0000";
+CM_ SG_ 2147484197 S_GL "锁机状态：0-3，含义：0：不锁机，1：一级锁机，2：二级锁机
+";
+CM_ SG_ 2147483921 H_WH "工作时间反馈:0-65535,分辨率:1hour/bit,缺省值:0";
+CM_ SG_ 2147484164 E_FIV "燃油喷射量控制程度:0-100%,分辨率:0.4%;缺省值:0";
+CM_ SG_ 2147484164 E_FT "目标燃油喷射量:0-500(mm3/st),分辨率：1/128 mm3/st,缺省值:0";
+CM_ SG_ 2147484164 P_FAD "共轨压差:-125-125(MPa),分辨率:1MPa,缺省值:-125";
+CM_ SG_ 2147484164 P_FR "共轨压力:0-251(MPa),分辨率:1/256 MPa,缺省值:0";
+CM_ SG_ 2147484163 M_FL "燃油位:0～100,分辨率:1%/bit,缺省值:0";
+CM_ SG_ 2147484163 T_Air "进气温度:-40-210℃，分辨率:1℃/bit，缺省值:-40℃";
+CM_ SG_ 2147484163 T_Air_B "增压温度:-40-210℃，分辨率:1℃/bit，缺省值:-40℃";
+CM_ SG_ 2147484163 P_Air_B "增压压力:0-500kPa,分辨率:2kPa/bit,缺省值:0";
+CM_ SG_ 2147484162 P_Air "大气压力:0-125kPa,分辨率:0.5kPa/bit,缺省值:0";
+CM_ SG_ 2147484162 P_Oil "机油压力:0-1000kPa,分辨率:4kPa/bit,缺省值:0";
+CM_ SG_ 2147484162 P_Fuel_In "共轨泵入口压力:-100～300kPa,分辨率:4kPa/bit,缺省值:-100";
+CM_ SG_ 2147484162 T_Fuel "冷却水温:-40～210℃,分辨率:1℃/bit,缺省值：-40";
+CM_ SG_ 2147484161 V_Knob "油门旋钮电压:0～5V,分辨率:0.01v/bit,缺省值:0";
+CM_ SG_ 2147484161 W_Gear "工作档位:1－10,分辨率:1/bit,缺省值:—";
+CM_ SG_ 2147484161 N_AT "发动机实际扭矩:-125~+125,分辨率:1%/bit,缺省值:-125";
+CM_ SG_ 2147484160 R_TSP "发动机目标转速:0～2200rpm,分辨率:1rpm/bit,缺省值:0";
+CM_ SG_ 2147484160 R_ASP "发动机实际转速:0～2200rpm,分辨率:1rpm/bit,缺省值:0";
+CM_ SG_ 2147484160 T_CW "冷却水温:0～130℃,分辨率:1℃/bit,缺省值：0";
+CM_ SG_ 2147484160 V_Supply "电源电压:0～32V,分辨率:0.1v/bit,缺省值:0";
+BA_DEF_ SG_  "SAEDocument" STRING ;
+BA_DEF_ SG_  "DDI" INT 0 65535;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "Yes","No";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","reserved","OnChange","reserved","reserved","reserved","NoSigSendType";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 10000;
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl";
+BA_DEF_ BO_  "SAE_Document" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_  "SingleFrame" INT 0 1;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","reserved","cyclicIfActive","reserved","reserved","reserved","reserved","reserved","noMsgSendType";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "Yes","No";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_  "SAE_J1939_71_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_73_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_21_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_75_SpecVersion" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_DEF_  "SAEDocument" "";
+BA_DEF_DEF_  "DDI" 0;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "SAE_Document" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SingleFrame" 1;
+BA_DEF_DEF_  "VFrameFormat" "ExtendedCAN";
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "SAE_J1939_71_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_73_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_21_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_75_SpecVersion" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_ "VFrameFormat" BO_ 2147487632 3;
+BA_ "VFrameFormat" BO_ 2147487568 3;
+BA_ "VFrameFormat" BO_ 2147487552 3;
+BA_ "VFrameFormat" BO_ 2147487536 3;
+BA_ "GenMsgCycleTime" BO_ 2147484200 1000;
+BA_ "VFrameFormat" BO_ 2147484200 1;
+VAL_ 2147484421 S_TRVEL 1 "ON" 0 "OFF" ;
+VAL_ 2147484421 S_BOOST 1 "ON" 0 "OFF" ;
+VAL_ 2147484198 B_AI 1 "ON" 0 "OFF" ;
+VAL_ 2147484198 B_TS 1 "ON" 0 "OFF" ;
+VAL_ 2147484198 B_WM 4 "B模式" 2 "L模式" 1 "H模式" 0 "S模式" ;
+VAL_ 2147484198 S_MC 1 "ON" 0 "OFF" ;
+VAL_ 2147484198 S_DIAG 1 "ON" 0 "OFF" ;
+VAL_ 2147484198 S_IGN 1 "ON" 0 "OFF" ;
+VAL_ 2147484198 S_CM 1 "ON" 0 "OFF" ;
+VAL_ 2147484198 S_SMC 1 "ON" 0 "OFF" ;
+VAL_ 2147484197 S_ES 1 "ON" 0 "OFF" ;
+VAL_ 2147484197 S_FD 1 "ON" 0 "OFF" ;
+VAL_ 2147484197 S_WU 1 "ON" 0 "OFF" ;
+VAL_ 2147484197 S_GL 2 "二级锁车" 1 "一级锁车" 0 "未锁机" ;
+

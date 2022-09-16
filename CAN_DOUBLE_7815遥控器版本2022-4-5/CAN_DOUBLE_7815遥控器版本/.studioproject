@@ -1,0 +1,13 @@
+[PreviousGenFiles]
+HeaderPath=G:/AutoChips Projrct/CAN_DOUBLE_7815/Inc
+HeaderFiles=gpio.h;can.h;i2c.h;timer.h;uart.h;ac78xx_irq_cb.h;main.h;system_ac78xx.h;
+SourcePath=G:/AutoChips Projrct/CAN_DOUBLE_7815/Src
+SourceFiles=gpio.c;ac78xx_irq_cb.c;ac78xx_msp.c;main.c;system_ac78xx.c;can.c;i2c.c;uart.c;timer.c;
+
+[PreviousLibFiles]
+LibFiles=Drivers/ATC_Driver/Inc/ac78xx_gpio.h;Drivers/ATC_Driver/Inc/ac78xx_gpio_reg.h;Drivers/ATC_Driver/Inc/ac78xx_can.h;Drivers/ATC_Driver/Inc/ac78xx_can_reg.h;Drivers/ATC_Driver/Inc/ac78xx_i2c.h;Drivers/ATC_Driver/Inc/ac78xx_i2c_reg.h;Drivers/ATC_Driver/Inc/ac78xx_dma.h;Drivers/ATC_Driver/Inc/ac78xx_dma_reg.h;Drivers/ATC_Driver/Inc/ac78xx_timer.h;Drivers/ATC_Driver/Inc/ac78xx_timer_reg.h;Drivers/ATC_Driver/Inc/ac78xx_uart.h;Drivers/ATC_Driver/Inc/ac78xx_uart_reg.h;Drivers/ATC_Driver/Src/ac78xx_gpio.c;Drivers/ATC_Driver/Src/ac78xx_can.c;Drivers/ATC_Driver/Src/ac78xx_i2c.c;Drivers/ATC_Driver/Src/ac78xx_dma.c;Drivers/ATC_Driver/Src/ac78xx_timer.c;Drivers/ATC_Driver/Src/ac78xx_uart.c;Drivers/Device/Include/debugzone.h;Drivers/Device/Include/ac78xx.h;Drivers/Device/Include/ac78xx_ckgen.h;Drivers/Device/Source/ac78xx_ckgen.c;Drivers/Device/Include/ac78xx_ckgen_regs.h;Drivers/Device/Include/ac78xx_spm.h;Drivers/Device/Source/ac78xx_spm.c;Drivers/Device/Include/ac78xx_spm_regs.h;Drivers/ATC_Driver/Inc/ac78xx_gpio.h;Drivers/ATC_Driver/Inc/ac78xx_gpio_reg.h;
+
+[PreviousUsedKeilFiles]
+SourceFiles=..\Src\main.c;..\Src\gpio.c;..\Src\can.c;..\Src\i2c.c;..\Src\timer.c;..\Src\uart.c;..\Src\ac78xx_irq_cb.c;..\Src\ac78xx_msp.c;..\Src\system_ac78xx.c;../Drivers/ATC_Driver/Src/ac78xx_gpio.c;../Drivers/ATC_Driver/Src/ac78xx_can.c;../Drivers/ATC_Driver/Src/ac78xx_i2c.c;../Drivers/ATC_Driver/Src/ac78xx_dma.c;../Drivers/ATC_Driver/Src/ac78xx_timer.c;../Drivers/ATC_Driver/Src/ac78xx_uart.c;;G:/AutoChips Projrct/CAN_DOUBLE_7815//MDK-ARM/startup_ac78xx.s;
+HeaderPath=..\Drivers\ATC_Driver\Inc;..\Drivers\Device\Include;..\Inc;
+
